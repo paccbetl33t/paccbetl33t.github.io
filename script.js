@@ -16,7 +16,7 @@ workmax = 0;
 
 //save before exiting
 function closingCode() {
-  if (confirm("You have closed the window, would you like to save?") === true) {
+  if (confirm("Вы хотите сохранить своих патриков?") === true) {
     save();
     return null;
   }
@@ -28,8 +28,8 @@ function addcomma(x) {
 //updates all values
 function reloadall() {
   document.getElementById("click").innerHTML =
-    "LB/click: " + addcomma(moneyup) + " | LB/sec: " + addcomma(msec);
-  document.getElementById("total").innerHTML = "LB: " + addcomma(money);
+    "LB/click: " + addcomma(moneyup) + " | Патриков/sec: " + addcomma(msec);
+  document.getElementById("total").innerHTML = "Патрики: " + addcomma(money);
   document.getElementById("cat").innerHTML =
     catown + "-clicker cat: " + addcomma(catcost) + " | +" + addcomma(catadd) + "/sec";
   document.getElementById("worker").innerHTML =
@@ -81,7 +81,7 @@ function load() {
 }
 //resets all values
 function reset() {
-  if (confirm("Are you sure you want to reset?") === true) {
+  if (confirm("Вы хотите утопить своих Патриков?") === true) {
     money = 0;
     moneyup = 1;
     msec = 0;
@@ -99,14 +99,14 @@ function reset() {
 //timer
 function myTimer() {
     money += msec;
-  document.getElementById("total").innerHTML = "LB: " + addcomma(money);
+  document.getElementById("total").innerHTML = "Патрики: " + addcomma(money);
 }
 setInterval(myTimer, 1000);
 
 //what happens when button is clicked
 function clicked() {
   money += moneyup;
-  document.getElementById("total").innerHTML = "LB: " + addcomma(money);
+  document.getElementById("total").innerHTML = "Патрики: " + addcomma(money);
 }
 //upgrade function
 function upgrade(name) {
@@ -218,6 +218,6 @@ function upgrade(name) {
   }
 
   document.getElementById("click").innerHTML =
-    "LB/click: " + addcomma(moneyup) + " | LB/sec: " + addcomma(msec);
+    "Патриков/click: " + addcomma(moneyup) + " | Пвтриков/sec: " + addcomma(msec);
   document.getElementById("total").innerHTML = "LB: " + addcomma(money);
 }
