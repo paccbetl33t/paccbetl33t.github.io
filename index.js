@@ -8,8 +8,8 @@ const updateScore = cookies => {
     const title = document.querySelector("title");
     const score = document.querySelector("#score span");
 
-    score.innerText = cookies;
-    title.innerHTML = cookies + " cookies - Cookie Clicker"
+    score.innerText = Патрики;
+    title.innerHTML = Патрики + " ПатрикГенг- Патрик Кликер"
 
     localStorage.setItem("cookies", cookies);
 }
